@@ -60,6 +60,8 @@ import java.io.IOException;
 import java.util.ArrayList;
 import java.util.List;
 
+import static bekia.recycle.helper.Utils.retrieveUserLanguage;
+
 public class ItemSellActivity extends AppCompatActivity {
 
     RecyclerView recyclerViewSellItem ;
@@ -222,7 +224,8 @@ ProgressBar progressBarAddItem ;
        LoginResponse loginResponse =  Utils.retrieveUserInfo(ItemSellActivity.this);
 
        String token =  loginResponse.getToken_type() +" "+loginResponse.getAccess_token();
-       Call<AddNewItemResponse> call = apiService.addNewItemApi(token,"en" ,addNewItemRequest );
+       Call<AddNewItemResponse> call = apiService.addNewItemApi(token,
+               retrieveUserLanguage(getApplicationContext()) ,addNewItemRequest );
        call.enqueue(new Callback<AddNewItemResponse>() {
            @Override
            public void onResponse(Call<AddNewItemResponse>call, Response<AddNewItemResponse> response) {
@@ -282,7 +285,7 @@ ProgressBar progressBarAddItem ;
     /* ============================================================================*/
     private void getCities()
     {
-        Call<CityResponse> call = apiService.getCitiesApi("en");
+        Call<CityResponse> call = apiService.getCitiesApi(retrieveUserLanguage(getApplicationContext()));
         call.enqueue(new Callback<CityResponse>() {
             @Override
             public void onResponse(Call<CityResponse>call, Response<CityResponse> response) {
@@ -361,7 +364,7 @@ AlertDialog dialogA;
     private void handleSubCategories()
     {
         AlertDialog.Builder builder = new AlertDialog.Builder(this);
-        builder.setTitle("Choose your Item Sub-Category");
+        builder.setTitle(getString(R.string.chooseItemSubCategory));
         builder.setCancelable(true);
 
         builder.setItems( stringSubCategories, new DialogInterface.OnClickListener() {
@@ -446,7 +449,7 @@ AlertDialog dialogA;
 
         ApiInterface apiService =
                 ApiClient.getClient().create(ApiInterface.class);
-        Call<CategoriesResponse> call = apiService.getCategoriesApi("en");
+        Call<CategoriesResponse> call = apiService.getCategoriesApi(retrieveUserLanguage(getApplicationContext()));
         call.enqueue(new Callback<CategoriesResponse>() {
             @Override
             public void onResponse(Call<CategoriesResponse>call, Response<CategoriesResponse> response) {
@@ -483,7 +486,7 @@ AlertDialog dialogA;
 
         ApiInterface apiService =
                 ApiClient.getClient().create(ApiInterface.class);
-        Call<CategoriesResponse> call = apiService.getSubCategoriesApi(categoryId ,"en");
+        Call<CategoriesResponse> call = apiService.getSubCategoriesApi(categoryId ,retrieveUserLanguage(getApplicationContext()));
         call.enqueue(new Callback<CategoriesResponse>() {
             @Override
             public void onResponse(Call<CategoriesResponse>call, Response<CategoriesResponse> response) {

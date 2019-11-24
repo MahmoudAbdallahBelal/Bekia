@@ -32,6 +32,8 @@ import android.widget.Toast;
 
 import java.util.List;
 
+import static bekia.recycle.helper.Utils.retrieveUserLanguage;
+
 public class SubCatItemsActivity extends AppCompatActivity {
 
 
@@ -85,7 +87,7 @@ public class SubCatItemsActivity extends AppCompatActivity {
         recyclerSubCategoriesItems.setVisibility(View.GONE);
         ApiInterface apiService =
                 ApiClient.getClient().create(ApiInterface.class);
-        Call<GetItemsResponse> call = apiService.getAllItemsApi(categoryId ,"en");
+        Call<GetItemsResponse> call = apiService.getAllItemsApi(categoryId ,retrieveUserLanguage(getApplicationContext()));
         call.enqueue(new Callback<GetItemsResponse>() {
             @Override
             public void onResponse(Call<GetItemsResponse>call, Response<GetItemsResponse> response) {

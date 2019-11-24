@@ -88,6 +88,7 @@
     <string name="sub_category">الفئة الفرعية</string>
     <string name="checkPermission">تحقق الأذونات</string>
     <string name="cameraPermission">إذن الكاميرا وتخزينها</string>
+    <string name="chooseItemSubCategory">اختيار البند الخاص البند الفرعي</string>
 
 
 </resources>

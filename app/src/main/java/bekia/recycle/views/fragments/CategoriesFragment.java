@@ -31,6 +31,8 @@ import retrofit2.Call;
 import retrofit2.Callback;
 import retrofit2.Response;
 
+import static bekia.recycle.helper.Utils.retrieveUserLanguage;
+
 /**
  * A simple {@link Fragment} subclass.
  */
@@ -71,7 +73,7 @@ public class CategoriesFragment extends Fragment {
         progressBarGetCategories.setVisibility(View.VISIBLE);
         ApiInterface apiService =
                 ApiClient.getClient().create(ApiInterface.class);
-        Call<CategoriesResponse> call = apiService.getCategoriesApi("en");
+        Call<CategoriesResponse> call = apiService.getCategoriesApi(retrieveUserLanguage(getContext()));
         call.enqueue(new Callback<CategoriesResponse>() {
             @Override
             public void onResponse(Call<CategoriesResponse>call, Response<CategoriesResponse> response) {

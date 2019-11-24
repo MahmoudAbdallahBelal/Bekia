@@ -29,6 +29,8 @@ import android.widget.Toast;
 
 import java.util.List;
 
+import static bekia.recycle.helper.Utils.retrieveUserLanguage;
+
 public class SubCategoriesActivity extends AppCompatActivity {
 
     int categoryId;
@@ -69,7 +71,7 @@ public class SubCategoriesActivity extends AppCompatActivity {
         progressBarSubCategories.setVisibility(View.VISIBLE);
         ApiInterface apiService =
                 ApiClient.getClient().create(ApiInterface.class);
-        Call<CategoriesResponse> call = apiService.getSubCategoriesApi(categoryId ,"en");
+        Call<CategoriesResponse> call = apiService.getSubCategoriesApi(categoryId ,retrieveUserLanguage(getApplicationContext()));
         call.enqueue(new Callback<CategoriesResponse>() {
             @Override
             public void onResponse(Call<CategoriesResponse>call, Response<CategoriesResponse> response) {

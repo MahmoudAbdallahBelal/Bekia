@@ -30,6 +30,8 @@ import android.widget.Toast;
 import java.util.ArrayList;
 import java.util.List;
 
+import static bekia.recycle.helper.Utils.retrieveUserLanguage;
+
 public class UserChatsActivity extends AppCompatActivity {
 
     private ProgressBar progressBarUserItemChats;
@@ -60,7 +62,8 @@ public class UserChatsActivity extends AppCompatActivity {
         LoginResponse loginResponse = Utils.retrieveUserInfo(this);
         String token = loginResponse.getToken_type() + " "+loginResponse.getAccess_token();
 
-        Call<GetUserChatsResponse> call = apiService.getUserChatsApi(token ,"en");
+        Call<GetUserChatsResponse> call = apiService.getUserChatsApi(token ,
+                retrieveUserLanguage(getApplicationContext()));
         call.enqueue(new Callback<GetUserChatsResponse>() {
             @Override
             public void onResponse(Call<GetUserChatsResponse>call, final Response<GetUserChatsResponse> response) {

@@ -34,6 +34,8 @@ import android.widget.Toast;
 
 import java.util.List;
 
+import static bekia.recycle.helper.Utils.retrieveUserLanguage;
+
 public class UserItemsActivity extends AppCompatActivity {
 
     RecyclerView recyclerViewUserItems;
@@ -73,7 +75,7 @@ public class UserItemsActivity extends AppCompatActivity {
                 ApiClient.getClient().create(ApiInterface.class);
         LoginResponse loginResponse = Utils.retrieveUserInfo(this);
       String token =   loginResponse.getToken_type() +" "+loginResponse.getAccess_token();
-        Call<GetItemsResponse> call = apiService.getUserItemsApi( token,"en");
+        Call<GetItemsResponse> call = apiService.getUserItemsApi( token,retrieveUserLanguage(getApplicationContext()));
         call.enqueue(new Callback<GetItemsResponse>() {
             @Override
             public void onResponse(Call<GetItemsResponse>call, Response<GetItemsResponse> response) {
@@ -151,7 +153,9 @@ public class UserItemsActivity extends AppCompatActivity {
         LoginResponse loginResponse = Utils.retrieveUserInfo(this);
         String token =   loginResponse.getToken_type() +" "+loginResponse.getAccess_token();
 
-        Call<DeleteItemResponse> call = apiService.deleteItemApi( token,"en",deleteItemRquest);
+        Call<DeleteItemResponse> call = apiService.deleteItemApi( token,
+                retrieveUserLanguage(getApplicationContext())
+                ,deleteItemRquest);
         call.enqueue(new Callback<DeleteItemResponse>() {
             @Override
             public void onResponse(Call<DeleteItemResponse>call, Response<DeleteItemResponse> response) {

@@ -30,6 +30,8 @@ import android.widget.Toast;
 import java.util.ArrayList;
 import java.util.List;
 
+import static bekia.recycle.helper.Utils.retrieveUserLanguage;
+
 public class GetChatItemActivity extends AppCompatActivity {
 
     private RecyclerView recyclerViewChat;
@@ -139,7 +141,9 @@ public class GetChatItemActivity extends AppCompatActivity {
         LoginResponse loginResponse = Utils.retrieveUserInfo(this);
         String token = loginResponse.getToken_type() + " "+loginResponse.getAccess_token();
 
-        Call<GetChatMessagesResponse> call = apiService.getChatMessagesApi(token ,"en" , Constants.chatsDetails.getChatId());
+        Call<GetChatMessagesResponse> call = apiService.getChatMessagesApi(token ,
+                retrieveUserLanguage(getApplicationContext()) ,
+                Constants.chatsDetails.getChatId());
         call.enqueue(new Callback<GetChatMessagesResponse>() {
             @Override
             public void onResponse(Call<GetChatMessagesResponse>call, Response<GetChatMessagesResponse> response) {

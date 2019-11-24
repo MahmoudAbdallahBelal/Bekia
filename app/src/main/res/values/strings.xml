@@ -86,4 +86,5 @@
     <string name="sub_category">sub - category</string>
     <string name="checkPermission">check permissions</string>
     <string name="cameraPermission">camera permission and storage</string>
+    <string name="chooseItemSubCategory">Choose your Item Sub-Category</string>
 </resources>

@@ -65,6 +65,7 @@ import retrofit2.Callback;
 import retrofit2.Response;
 
 import static android.Manifest.permission.CAMERA;
+import static bekia.recycle.helper.Utils.retrieveUserLanguage;
 
 public class RegisterActivity extends AppCompatActivity {
 
@@ -213,7 +214,7 @@ public class RegisterActivity extends AppCompatActivity {
     String[] stringCities;
     private void getCity()
     {
-        Call<CityResponse> call = apiService.getCitiesApi("en");
+        Call<CityResponse> call = apiService.getCitiesApi(retrieveUserLanguage(getApplicationContext()));
         call.enqueue(new Callback<CityResponse>() {
             @Override
             public void onResponse(Call<CityResponse>call, Response<CityResponse> response) {
@@ -256,7 +257,7 @@ public class RegisterActivity extends AppCompatActivity {
         registerRequest.setUserType(userCheck);
         registerRequest.setPhone(phoneEdit.getText().toString());
 
-        Call<RegisterResponse> call = apiService.registerApi("en" ,registerRequest );
+        Call<RegisterResponse> call = apiService.registerApi(retrieveUserLanguage(getApplicationContext()) ,registerRequest );
         call.enqueue(new Callback<RegisterResponse>() {
             @Override
             public void onResponse(Call<RegisterResponse>call, Response<RegisterResponse> response) {

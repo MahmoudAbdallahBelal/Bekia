@@ -88,5 +88,6 @@
     <string name="sub_category">Unterkategorie</string>
     <string name="checkPermission">Überprüfen Sie die Berechtigungen</string>
     <string name="cameraPermission">Kameraerlaubnis und Speicherung</string>
+    <string name="chooseItemSubCategory">Wählen Sie Ihre Artikelunterkategorie</string>
 
 </resources>

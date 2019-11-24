@@ -1,5 +1,6 @@
 package bekia.recycle.views.login;
 
+import android.content.Context;
 import android.content.Intent;
 import androidx.appcompat.app.AppCompatActivity;
 
@@ -20,6 +21,7 @@ import bekia.recycle.requests.login.LoginResponse;
 import bekia.recycle.requests.profile.ProfileResponse;
 import bekia.recycle.requests.register.RegisterRequest;
 import bekia.recycle.requests.register.RegisterResponse;
+import bekia.recycle.views.LocaleManager;
 import bekia.recycle.views.forget_password.ForgetPasswordActivity;
 import bekia.recycle.views.home.HomeActivity;
 import bekia.recycle.views.profile.UserProfileActivity;
@@ -40,7 +42,10 @@ public class LoginActivity extends AppCompatActivity {
     TextView forgetPasswordTxt;
     ProgressBar progressBarLogin;
 
-
+//    @Override
+//    protected void attachBaseContext(Context base) {
+//        super.attachBaseContext(LocaleManager.setLocale(base,"ar"));
+//    }
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);

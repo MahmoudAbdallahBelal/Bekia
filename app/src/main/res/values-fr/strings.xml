@@ -6,19 +6,19 @@
 
     <string name="email_or_mobile_login">Email / Mobile</string>
     <string name="password_login">Mot de passe</string>
-    <string name="login_button" tools:ignore="StringEscaping">S'identifier</string>
-    <string name="register_button" tools:ignore="StringEscaping">S'inscrire</string>
+    <string name="login_button" >S\'identifier</string>
+    <string name="register_button">S\'inscrire</string>
     <string name="forget_password_button">Mot de passe oublié</string>
     <string name="user_type">Utilisatrice</string>
     <string name="company_type">Entreprise</string>
     <string name="register_name_hint">Entrez le nom</string>
-    <string name="register_user_name_hint" tools:ignore="StringEscaping">Saisissez votre nom d'utilisateur</string>
+    <string name="register_user_name_hint" >Saisissez votre nom d\'utilisateur</string>
     <string name="register_email_hint">entrer email</string>
     <string name="register_mobile_hint">entrer email</string>
     <string name="register_select_city_hint">Sélectionnez une ville</string>
     <string name="register_password">Entrer le mot de passe</string>
     <string name="register_confirm_password">Entrer Confirmer le mot de passe</string>
-    <string name="nav_tool_bar_sell_item" tools:ignore="StringEscaping">Vendre l'article</string>
+    <string name="nav_tool_bar_sell_item" >Vendre l\'article</string>
     <string name="home_categories">Les catégories</string>
     <string name="home_most_popular">Le plus populaire</string>
 
@@ -46,16 +46,16 @@
     <string name="recomndationMessage">Laissez-moi vous recommander cette application</string>
     <string name="chooseOne">choisissez-en un</string>
     <string name="negtiable">est négociable</string>
-    <string name="notNegtiable" tools:ignore="StringEscaping">n'est pas négociable</string>
-    <string name="thisYourItem" tools:ignore="StringEscaping">c'est votre propre annonce</string>
-    <string name="item_name" tools:ignore="StringEscaping">nom de l'article</string>
+    <string name="notNegtiable" >n\'est pas négociable</string>
+    <string name="thisYourItem" >c\'est votre propre annonce</string>
+    <string name="item_name" >nom de l\'article</string>
     <string name="item_description">élément Description</string>
-    <string name="item_price" tools:ignore="StringEscaping">prix de l'article</string>
-    <string name="item_is_negotiable" tools:ignore="StringEscaping">L'article est négociable</string>
-    <string name="item_owner_phone_number" tools:ignore="StringEscaping">Numéro de téléphone du propriétaire de l'article</string>
+    <string name="item_price" >prix de l\'article</string>
+    <string name="item_is_negotiable">L\'article est négociable</string>
+    <string name="item_owner_phone_number" >Numéro de téléphone du propriétaire de l\'article</string>
     <string name="phone_number">numéro de téléphone</string>
     <string name="invalidData">Données invalides</string>
-    <string name="allowCameraPermission" tools:ignore="StringEscaping">veuillez autoriser l'autorisation de stockage / caméra</string>
+    <string name="allowCameraPermission">autoriser l\'autorisation de stockage / caméra</string>
     <string name="successEdit">Succès Modifier</string>
     <string name="chooseCity">Choisissez votre ville</string>
     <string name="selectFile">Choisir le dossier</string>
@@ -64,9 +64,9 @@
     <string name="enter_name">Entrez le nom</string>
     <string name="no_items_found">Aucun élément trouvé</string>
     <string name="your_phone">ton téléphone</string>
-    <string name="item_category" tools:ignore="StringEscaping">Catégorie d'article</string>
+    <string name="item_category" >Catégorie d\'article</string>
     <string name="item_sub_category">Article Sous Catégorie</string>
-    <string name="item_city" tools:ignore="StringEscaping">Ville de l'article</string>
+    <string name="item_city" >Ville de l\'article</string>
     <string name="is_negotiable">est négociable</string>
     <string name="select_language">Choisir la langue</string>
     <string name="arabic">arabe</string>
@@ -74,10 +74,10 @@
     <string name="germeny">Allemagne</string>
     <string name="french">Française</string>
     <string name="my_profile">Mon profil</string>
-    <string name="sell_item" tools:ignore="StringEscaping">Vendre l'article</string>
+    <string name="sell_item" >Vendre l\'article</string>
     <string name="user_items">Articles utilisateur</string>
     <string name="settings">Paramètres</string>
-    <string name="share_app" tools:ignore="StringEscaping">Partager l'application</string>
+    <string name="share_app" >Partager l\'application</string>
     <string name="rate_app">Application de taux</string>
     <string name="inbox">Boîte de réception</string>
     <string name="logout">Connectez - Out</string>
@@ -88,5 +88,6 @@
     <string name="sub_category">sous-catégorie</string>
     <string name="checkPermission">vérifier les autorisations</string>
     <string name="cameraPermission">autorisation de la caméra et stockage </string>
+    <string name="chooseItemSubCategory">Choisissez votre sous-catégorie d\'article</string>
 
 </resources>

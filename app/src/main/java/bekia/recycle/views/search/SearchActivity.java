@@ -75,7 +75,8 @@ public class SearchActivity extends AppCompatActivity {
                 ApiClient.getClient().create(ApiInterface.class);
         LoginResponse loginResponse = Utils.retrieveUserInfo(this);
         String token =   loginResponse.getToken_type() +" "+loginResponse.getAccess_token();
-        Call<GetItemsResponse> call = apiService.searchItemApi(searchEdit.getText().toString(),"0" , "0");
+        Call<GetItemsResponse> call = apiService.searchItemApi(searchEdit.getText().toString(),
+                "0" , "0");
         call.enqueue(new Callback<GetItemsResponse>() {
             @Override
             public void onResponse(Call<GetItemsResponse>call, Response<GetItemsResponse> response) {

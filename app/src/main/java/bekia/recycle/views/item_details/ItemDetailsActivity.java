@@ -36,6 +36,7 @@ import retrofit2.Callback;
 import retrofit2.Response;
 
 import static bekia.recycle.helper.Constants.itemDetails;
+import static bekia.recycle.helper.Utils.retrieveUserLanguage;
 
 
 public class ItemDetailsActivity extends AppCompatActivity {
@@ -129,7 +130,9 @@ public class ItemDetailsActivity extends AppCompatActivity {
                 ApiClient.getClient().create(ApiInterface.class);
         LoginResponse loginResponse = Utils.retrieveUserInfo(this);
         String token = loginResponse.getToken_type() + " " + loginResponse.getAccess_token();
-        Call<CreateChatResponse> call = apiService.createChatApi(token, "en", itemDetails.getItemId());
+        Call<CreateChatResponse> call = apiService.createChatApi(token,
+                retrieveUserLanguage(getApplicationContext()),
+                itemDetails.getItemId());
         call.enqueue(new Callback<CreateChatResponse>() {
             @Override
             public void onResponse(Call<CreateChatResponse> call, Response<CreateChatResponse> response) {
@@ -178,7 +181,8 @@ public class ItemDetailsActivity extends AppCompatActivity {
                 ApiClient.getClient().create(ApiInterface.class);
         LoginResponse loginResponse = Utils.retrieveUserInfo(this);
         String token = loginResponse.getToken_type() + " " + loginResponse.getAccess_token();
-        Call<LikeUnlikeResponse> call = apiService.likeAndUnlikeApi(token, itemDetails.getItemId(), "en");
+        Call<LikeUnlikeResponse> call = apiService.likeAndUnlikeApi(token, itemDetails.getItemId(),
+                retrieveUserLanguage(getApplicationContext()));
         call.enqueue(new Callback<LikeUnlikeResponse>() {
             @Override
             public void onResponse(Call<LikeUnlikeResponse> call, Response<LikeUnlikeResponse> response) {

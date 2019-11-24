@@ -34,6 +34,8 @@ import retrofit2.Call;
 import retrofit2.Callback;
 import retrofit2.Response;
 
+import static bekia.recycle.helper.Utils.retrieveUserLanguage;
+
 /**
  * A simple {@link Fragment} subclass.
  */
@@ -83,7 +85,7 @@ public class MostPopularFragment extends Fragment {
         recycleMostPopular.setVisibility(View.GONE);
         ApiInterface apiService =
                 ApiClient.getClient().create(ApiInterface.class);
-        Call<GetItemsResponse> call = apiService.getMostPopularApi( 3,"en");
+        Call<GetItemsResponse> call = apiService.getMostPopularApi( 3,retrieveUserLanguage(getContext()));
         call.enqueue(new Callback<GetItemsResponse>() {
             @Override
             public void onResponse(Call<GetItemsResponse>call, Response<GetItemsResponse> response) {

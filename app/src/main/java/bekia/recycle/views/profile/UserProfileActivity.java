@@ -56,6 +56,8 @@ import java.io.IOException;
 import java.util.ArrayList;
 import java.util.List;
 
+import static bekia.recycle.helper.Utils.retrieveUserLanguage;
+
 public class UserProfileActivity extends AppCompatActivity {
 
     private ImageView imgProfile;
@@ -188,7 +190,8 @@ public class UserProfileActivity extends AppCompatActivity {
        String token =  loginResponse.getToken_type() +" "+loginResponse.getAccess_token();
         ApiInterface apiService =
                 ApiClient.getClient().create(ApiInterface.class);
-        Call<ProfileResponse> call = apiService.getUserInfoApi(token,"en");
+        Call<ProfileResponse> call = apiService.getUserInfoApi(token,
+                retrieveUserLanguage(getApplicationContext()));
         call.enqueue(new Callback<ProfileResponse>() {
             @Override
             public void onResponse(Call<ProfileResponse> call, Response<ProfileResponse> response) {
@@ -288,7 +291,7 @@ public class UserProfileActivity extends AppCompatActivity {
     {
         ApiInterface apiService =
                 ApiClient.getClient().create(ApiInterface.class);
-        Call<CityResponse> call = apiService.getCitiesApi("en");
+        Call<CityResponse> call = apiService.getCitiesApi(retrieveUserLanguage(getApplicationContext()));
         call.enqueue(new Callback<CityResponse>() {
             @Override
             public void onResponse(Call<CityResponse>call, Response<CityResponse> response) {
