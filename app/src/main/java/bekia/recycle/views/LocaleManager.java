@@ -11,9 +11,11 @@ public class LocaleManager {
 
     public static Context setLocale(Context mContext, String lang) {
         return updateResources(mContext, lang);
-
     }
 
+    public static Context setNewLocale(Context mContext, String language) {
+        return updateResources(mContext, language);
+    }
 
 
     private static Context updateResources(Context context, String language) {
