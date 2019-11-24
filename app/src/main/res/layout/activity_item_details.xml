@@ -23,7 +23,7 @@
     android:textSize="16sp"
     android:layout_margin="10dp"
     android:textColor="@color/colorBlack"
-    android:text="item name"
+    android:text="@string/item_name"
     android:layout_width="match_parent"
     android:layout_height="wrap_content"/>
     <TextView
@@ -31,7 +31,7 @@
         android:textSize="18sp"
         android:layout_margin="10dp"
         android:textColor="@color/colorGray"
-        android:text="item name"
+        android:text="@string/item_name"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"/>
 
@@ -46,7 +46,7 @@
         android:textSize="16sp"
         android:layout_margin="10dp"
         android:textColor="@color/colorBlack"
-        android:text="item Description"
+        android:text="@string/item_description"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"/>
     <TextView
@@ -54,7 +54,7 @@
         android:textSize="18sp"
         android:layout_margin="10dp"
         android:textColor="@color/colorGray"
-        android:text="item Description"
+        android:text="@string/item_description"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"/>
 
@@ -70,7 +70,7 @@
         android:textSize="16sp"
         android:layout_margin="10dp"
         android:textColor="@color/colorBlack"
-        android:text="item Price"
+        android:text="@string/item_price"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"/>
     <TextView
@@ -78,7 +78,7 @@
         android:textSize="18sp"
         android:layout_margin="10dp"
         android:textColor="@color/colorGray"
-        android:text="item Price"
+        android:text="@string/item_price"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"/>
 
@@ -93,7 +93,7 @@
         android:textSize="16sp"
         android:layout_margin="10dp"
         android:textColor="@color/colorBlack"
-        android:text="Item Is Negotiable"
+        android:text="@string/item_is_negotiable"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"/>
     <TextView
@@ -101,7 +101,7 @@
         android:textSize="18sp"
         android:layout_margin="10dp"
         android:textColor="@color/colorGray"
-        android:text="item Is Negotiable"
+        android:text="@string/item_is_negotiable"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"/>
 
@@ -126,7 +126,7 @@
         android:textSize="16sp"
         android:layout_margin="5dp"
         android:textColor="@color/colorBlack"
-        android:text="Item Owner Phone Number"
+        android:text="@string/item_owner_phone_number"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"/>
       <TextView
@@ -134,7 +134,7 @@
           android:textSize="18sp"
           android:layout_margin="5dp"
           android:textColor="@color/colorGray"
-          android:text="phone number"
+          android:text="@string/phone_number"
           android:layout_width="match_parent"
           android:layout_height="wrap_content"/>
   </LinearLayout>

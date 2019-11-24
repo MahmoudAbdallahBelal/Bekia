@@ -6,36 +6,36 @@
     <group android:checkableBehavior="single">
         <item
             android:id="@+id/nav_categories"
-            android:title="Categories" />
+            android:title="@string/categories" />
         <item
             android:id="@+id/nav_profile"
-            android:title="My Profile" />
+            android:title="@string/my_profile" />
         <item
             android:id="@+id/nav_sell_item"
-            android:title="Sell Item" />
+            android:title="@string/sell_item" />
         <item
             android:id="@+id/nav_user_item"
-            android:title="User Items" />
+            android:title="@string/user_items" />
 
         <item
             android:id="@+id/nav_settings"
-            android:title="Settings" />
+            android:title="@string/settings" />
     </group>
 
     <item android:title="">
         <menu>
             <item
                 android:id="@+id/nav_share"
-                android:title="Share App" />
+                android:title="@string/share_app" />
             <item
                 android:id="@+id/nav_rate"
-                android:title="Rate App" />
+                android:title="@string/rate_app" />
             <item
                 android:id="@+id/nav_inbox"
-                android:title="Inbox" />
+                android:title="@string/inbox" />
             <item
                 android:id="@+id/nav_logout"
-                android:title="Logout" />
+                android:title="@string/logout" />
         </menu>
     </item>
 

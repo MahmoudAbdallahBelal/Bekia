@@ -3,13 +3,91 @@
     <string name="app_name">TIM</string>
     <string name="app_name_mean">تسويق صناعة القمامة</string>
 
-    <string name="email_or_mobile_login">أدخل الايميل / الموبايل</string>
-    <string name="password_login">الرقم السري</string>
-    <string name="login_button">الدخول</string>
-    <string name="register_button">التسجيل</string>
-    <string name="forget_password_button"><u>نسيت الرقم السري</u></string>
-    <string name="user_type"> مستخدم</string>
-    <string name="company_type">شركة</string>
+
+    <string name="email_or_mobile_login">البريد الإلكتروني / المحمول</string>
+    <string name="password_login">كلمه السر</string>
+    <string name="login_button">تسجيل الدخول</string>
+    <string name="register_button">انشاء حساب جديد </string>
+    <string name="forget_password_button">هل نسيت كلمة المرور</string>
+    <string name="user_type">مستخدم</string>
+    <string name="company_type">شركه</string>
+    <string name="register_name_hint">ادخل الاسم</string>
+    <string name="register_user_name_hint">ادخل اسم المستخدم</string>
+    <string name="register_email_hint">ادخل الايميل</string>
+    <string name="register_mobile_hint">ادخل رقم الهاتف</string>
+    <string name="register_select_city_hint">اختر المدينه</string>
+    <string name="register_password">ادخل كلمه المرور</string>
+    <string name="register_confirm_password">أدخل تأكيد كلمة المرور</string>
+    <string name="nav_tool_bar_sell_item">Sell Item</string>
+    <string name="home_categories">التصنيفات</string>
+    <string name="home_most_popular">الأكثر شعبية</string>
+
+    <string name="add_item_take_photos">التقاط الصور</string>
+
+    <!---->
+    <string name="navigation_drawer_open">Open navigation drawer</string>
+    <string name="navigation_drawer_close">Close navigation drawer</string>
+    <string name="nav_header_title">Android Studio</string>
+    <string name="nav_header_subtitle">android.studio@android.com</string>
+    <string name="nav_header_desc">Navigation header</string>
+
+    <!-- TODO: Remove or change this placeholder text -->
+    <string name="hello_blank_fragment">Hello blank fragment</string>
+    <string name="type_message">اكتب الرسالة</string>
+    <string name="enter_email">أدخل البريد الإلكتروني</string>
+    <string name="reset_password">إعادة تعيين كلمة المرور</string>
+    <string name="enter_code">ادخل الرمز</string>
+    <string name="enter_new_password">أدخل كلمة مرور جديدة</string>
+    <string name="categories">الاقسام</string>
+    <string name="mostPopular">الأكثر شعبية</string>
+    <string name="fab">استبدال مع العمل الخاص بك</string>
+    <string name="action">عمل</string>
+    <string name="appNotFound">التطبيق غير موجود في السوق حتى الآن</string>
+    <string name="recomndationMessage">اسمحوا لي أن أوصيك هذا التطبيق</string>
+    <string name="chooseOne">اختيار واحد</string>
+    <string name="negtiable">قابل للتفاوض</string>
+    <string name="notNegtiable">غير قابل للتفاوض</string>
+    <string name="thisYourItem">هذا عنصر الإعلان الخاص بك</string>
+    <string name="item_name">اسم العنصر</string>
+    <string name="item_description">وصف السلعة</string>
+    <string name="item_price">سعر البند</string>
+    <string name="item_is_negotiable">البند قابل للتفاوض</string>
+    <string name="item_owner_phone_number">رقم هاتف مالك البند</string>
+    <string name="phone_number">رقم الهاتف</string>
+    <string name="invalidData">بيانات غير صالحة</string>
+    <string name="allowCameraPermission">يرجى السماح للكاميرا / إذن التخزين</string>
+    <string name="successEdit">تم التعديل بنجاح</string>
+    <string name="chooseCity">اختر مدينتك</string>
+    <string name="selectFile">اختر ملف</string>
+    <string name="enable_edit_profile_info">تمكين تحرير معلومات الملف الشخصي</string>
+    <string name="edit_profile">تعديل الملف الشخصي</string>
+    <string name="enter_name">أدخل الاسم</string>
+    <string name="no_items_found">لم يتم العثور على العناصر</string>
+    <string name="your_phone">هاتفك</string>
+    <string name="item_category">فئه العنصر</string>
+    <string name="item_sub_category">البند الفئة الفرعية</string>
+    <string name="item_city">عنصر المدينه </string>
+    <string name="is_negotiable">قابل للتفاوض</string>
+    <string name="select_language">اختار اللغة</string>
+    <string name="arabic">عربى</string>
+    <string name="english">الإنجليزية</string>
+    <string name="germeny">ألمانيا</string>
+    <string name="french">الفرنسية</string>
+    <string name="my_profile">ملفي</string>
+    <string name="sell_item">بيعالعنصر  </string>
+    <string name="user_items">عناصر المستخدم</string>
+    <string name="settings">الإعدادات</string>
+    <string name="share_app">شارك التطبيق</string>
+    <string name="rate_app">معدل التطبيق</string>
+    <string name="inbox">صندوق الوارد</string>
+    <string name="logout">الخروج</string>
+    <string name="country_name">اسم الدولة</string>
+    <string name="select_image">اختر صورة</string>
+    <string name="category">الفئة</string>
+    <string name="delete">حذف</string>
+    <string name="sub_category">الفئة الفرعية</string>
+    <string name="checkPermission">تحقق الأذونات</string>
+    <string name="cameraPermission">إذن الكاميرا وتخزينها</string>
 
 
 </resources>

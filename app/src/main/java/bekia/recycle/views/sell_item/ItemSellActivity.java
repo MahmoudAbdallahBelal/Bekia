@@ -399,7 +399,7 @@ AlertDialog dialogA;
     private void handleCities()
     {
         AlertDialog.Builder builder = new AlertDialog.Builder(this);
-        builder.setTitle("Choose your City");
+        builder.setTitle(getString(R.string.chooseCity));
         builder.setCancelable(true);
 
         builder.setItems( stringCities, new DialogInterface.OnClickListener() {
@@ -557,7 +557,7 @@ AlertDialog dialogA;
         Intent intent = new Intent();
         intent.setType("image/*");
         intent.setAction(Intent.ACTION_GET_CONTENT);//
-        startActivityForResult(Intent.createChooser(intent, "Select File"), SELECT_FILE);
+        startActivityForResult(Intent.createChooser(intent, getString(R.string.selectFile)), SELECT_FILE);
     }
     private void cameraIntent() {
         Intent intent = new Intent(MediaStore.ACTION_IMAGE_CAPTURE);

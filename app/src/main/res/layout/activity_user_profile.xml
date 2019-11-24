@@ -51,7 +51,7 @@
                 <Button
                     android:id="@+id/button_enable_edit_profile"
                     android:layout_margin="20dp"
-                    android:text="Enable Edit Profile Info"
+                    android:text="@string/enable_edit_profile_info"
                     android:textColor="@color/colorWhite"
                     android:background="@color/colorBlack"
                     android:layout_width="match_parent"
@@ -124,7 +124,7 @@
                 <Button
                     android:id="@+id/button_edit_profile"
                     android:layout_margin="20dp"
-                    android:text="Edit Profile"
+                    android:text="@string/edit_profile"
                     android:textColor="@color/colorWhite"
                     android:background="@color/colorBlack"
                     android:layout_width="match_parent"

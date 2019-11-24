@@ -39,7 +39,7 @@
         <EditText
             android:id="@+id/edit_search_name"
             android:layout_weight="1"
-            android:hint="Enter name"
+            android:hint="@string/enter_name"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"/>
 
@@ -64,7 +64,7 @@
         <TextView
             android:id="@+id/text_not_found"
             android:gravity="center"
-            android:text="No Items Found"
+            android:text="@string/no_items_found"
             android:layout_width="match_parent"
             android:layout_height="match_parent"/>
 

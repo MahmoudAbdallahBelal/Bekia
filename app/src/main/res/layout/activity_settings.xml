@@ -12,7 +12,7 @@
     <TextView
         android:gravity="center"
         android:layout_gravity="center"
-        android:text="Select Language"
+        android:text="@string/select_language"
         android:layout_width="match_parent"
         android:layout_height="wrap_content">
 
@@ -24,7 +24,7 @@
         android:layout_margin="30dp"
         android:layout_alignParentBottom="true"
         android:id="@+id/button_language_ar"
-        android:text="العربية"
+        android:text="@string/arabic"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"></Button>
 
@@ -34,7 +34,7 @@
         android:layout_margin="30dp"
         android:layout_alignParentBottom="true"
         android:id="@+id/button_language_en"
-        android:text="English"
+        android:text="@string/english"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"></Button>
     <Button
@@ -43,7 +43,7 @@
         android:layout_margin="30dp"
         android:layout_alignParentBottom="true"
         android:id="@+id/button_language_gr"
-        android:text="Deutsch"
+        android:text="@string/germeny"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"></Button>
     <Button
@@ -52,7 +52,7 @@
         android:layout_margin="30dp"
         android:layout_alignParentBottom="true"
         android:id="@+id/button_language_fr"
-        android:text="française"
+        android:text="@string/french"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"></Button>
 </LinearLayout>

@@ -109,7 +109,7 @@ public class RegisterActivity extends AppCompatActivity {
                  if(result)
                    selectImage();
                  else
-                     Toast.makeText(RegisterActivity.this, "please allow the camera / storage permission", Toast.LENGTH_SHORT).show();
+                     Toast.makeText(RegisterActivity.this, getString(R.string.allowCameraPermission), Toast.LENGTH_SHORT).show();
             }
         });
          apiService =
@@ -166,7 +166,7 @@ public class RegisterActivity extends AppCompatActivity {
     private void handleCities()
     {
         AlertDialog.Builder builder = new AlertDialog.Builder(this);
-        builder.setTitle("Choose your City");
+        builder.setTitle(getString(R.string.chooseCity));
         builder.setCancelable(true);
 
 
@@ -339,7 +339,7 @@ public class RegisterActivity extends AppCompatActivity {
         Intent intent = new Intent();
         intent.setType("image/*");
         intent.setAction(Intent.ACTION_GET_CONTENT);//
-        startActivityForResult(Intent.createChooser(intent, "Select File"), SELECT_FILE);
+        startActivityForResult(Intent.createChooser(intent, getString(R.string.selectFile)), SELECT_FILE);
     }
     private void cameraIntent() {
         Intent intent = new Intent(MediaStore.ACTION_IMAGE_CAPTURE);

@@ -3,12 +3,90 @@
     <string name="app_name">TIM</string>
     <string name="app_name_mean">Müll Industrie Marketing</string>
 
+
     <string name="email_or_mobile_login">E-Mail / Handy</string>
     <string name="password_login">Passwort</string>
     <string name="login_button">Einloggen</string>
     <string name="register_button">Anmelden</string>
-    <string name="forget_password_button"><u>Passwort vergessen</u></string>
-    <string name="user_type">Benutzerin</string>
+    <string name="forget_password_button">Passwort vergessen</string>
+    <string name="user_type">Benutzer</string>
     <string name="company_type">Unternehmen</string>
+    <string name="register_name_hint">Name eingeben</string>
+    <string name="register_user_name_hint">Benutzernamen eingeben</string>
+    <string name="register_email_hint">Email eingeben</string>
+    <string name="register_mobile_hint">Geben Sie Mobile ein</string>
+    <string name="register_select_city_hint">Stadt wählen</string>
+    <string name="register_password">Passwort eingeben</string>
+    <string name="register_confirm_password">Passwort bestätigen eingeben</string>
+    <string name="nav_tool_bar_sell_item">Gegenstand verkaufen</string>
+    <string name="home_categories">Kategorien</string>
+    <string name="home_most_popular">Am beliebtesten</string>
+
+    <string name="add_item_take_photos">Fotos machen</string>
+
+    <!---->
+    <string name="navigation_drawer_open">Open navigation drawer</string>
+    <string name="navigation_drawer_close">Close navigation drawer</string>
+    <string name="nav_header_title">Android Studio</string>
+    <string name="nav_header_subtitle">android.studio@android.com</string>
+    <string name="nav_header_desc">Navigation header</string>
+
+    <!-- TODO: Remove or change this placeholder text -->
+    <string name="hello_blank_fragment">Hello blank fragment</string>
+    <string name="type_message">Nachricht eingeben</string>
+    <string name="enter_email">Email eingeben</string>
+    <string name="reset_password">Passwort zurücksetzen</string>
+    <string name="enter_code">Code eingeben</string>
+    <string name="enter_new_password">Neues Passwort eingeben</string>
+    <string name="categories">Kategorien</string>
+    <string name="mostPopular">Am beliebtesten</string>
+    <string name="fab">Ersetzen Sie durch Ihre eigene Aktion</string>
+    <string name="action">Aktion</string>
+    <string name="appNotFound">App Noch nicht auf dem Markt gefunden</string>
+    <string name="recomndationMessage">Lassen Sie sich diese Anwendung empfehlen</string>
+    <string name="chooseOne">wähle ein</string>
+    <string name="negtiable">ist verhandelbar</string>
+    <string name="notNegtiable">ist nicht verhandelbar</string>
+    <string name="thisYourItem">Dies ist Ihr eigener Anzeigenartikel</string>
+    <string name="item_name">Artikelname</string>
+    <string name="item_description">Artikelbeschreibung</string>
+    <string name="item_price">Stückpreis</string>
+    <string name="item_is_negotiable">Einzelteil ist verhandelbar</string>
+    <string name="item_owner_phone_number">Telefonnummer des Objektbesitzers</string>
+    <string name="phone_number">Telefonnummer</string>
+    <string name="invalidData">ungültige Daten</string>
+    <string name="allowCameraPermission">Bitte erlauben Sie die Kamera / Speichererlaubnis</string>
+    <string name="successEdit">Erfolg Bearbeiten</string>
+    <string name="chooseCity">Wähle deine Stadt</string>
+    <string name="selectFile">Datei aussuchen</string>
+    <string name="enable_edit_profile_info">Aktivieren Sie Profilinformationen bearbeiten</string>
+    <string name="edit_profile">Profil bearbeiten</string>
+    <string name="enter_name">Name eingeben</string>
+    <string name="no_items_found">Keine Elemente gefunden</string>
+    <string name="your_phone">dein Telefon</string>
+    <string name="item_category">Artikelkategorie</string>
+    <string name="item_sub_category">Artikel Unterkategorie</string>
+    <string name="item_city">Gegenstand Stadt</string>
+    <string name="is_negotiable">ist verhandelbar</string>
+    <string name="select_language">Sprache auswählen</string>
+    <string name="arabic">Arabisch</string>
+    <string name="english">Englisch</string>
+    <string name="germeny">Deutschland</string>
+    <string name="french">Französisch</string>
+    <string name="my_profile">Mein Profil</string>
+    <string name="sell_item">Gegenstand verkaufen</string>
+    <string name="user_items">Benutzerelemente</string>
+    <string name="settings">die Einstellungen</string>
+    <string name="share_app">App teilen</string>
+    <string name="rate_app">Bewertungs App</string>
+    <string name="inbox">Posteingang</string>
+    <string name="logout">Ausloggen</string>
+    <string name="country_name">Ländername</string>
+    <string name="select_image">Bild auswählen</string>
+    <string name="category">Kategorie</string>
+    <string name="delete">Löschen</string>
+    <string name="sub_category">Unterkategorie</string>
+    <string name="checkPermission">Überprüfen Sie die Berechtigungen</string>
+    <string name="cameraPermission">Kameraerlaubnis und Speicherung</string>
 
 </resources>

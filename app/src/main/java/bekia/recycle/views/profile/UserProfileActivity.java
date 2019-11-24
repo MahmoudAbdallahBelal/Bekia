@@ -124,7 +124,7 @@ public class UserProfileActivity extends AppCompatActivity {
               if(result)
                   selectImage();
               else
-                  Toast.makeText(UserProfileActivity.this, "please allow the camera / storage permission", Toast.LENGTH_SHORT).show();
+                  Toast.makeText(UserProfileActivity.this, getString(R.string.allowCameraPermission), Toast.LENGTH_SHORT).show();
               }
       });
     }
@@ -149,7 +149,7 @@ public class UserProfileActivity extends AppCompatActivity {
                 // Log.d(TAG, "Number of movies received: " + movies.size());
                 if (response.raw().code() == 200) {
 
-                    Toast.makeText(UserProfileActivity.this, "Success Edit", Toast.LENGTH_SHORT).show();
+                    Toast.makeText(UserProfileActivity.this, getString(R.string.successEdit), Toast.LENGTH_SHORT).show();
 
                     getUserInfo();
                 }
@@ -239,7 +239,7 @@ public class UserProfileActivity extends AppCompatActivity {
     private void handleCities()
     {
         AlertDialog.Builder builder = new AlertDialog.Builder(this);
-        builder.setTitle("Choose your City");
+        builder.setTitle(getString(R.string.chooseCity));
         builder.setCancelable(true);
 
 
@@ -367,7 +367,7 @@ public class UserProfileActivity extends AppCompatActivity {
         Intent intent = new Intent();
         intent.setType("image/*");
         intent.setAction(Intent.ACTION_GET_CONTENT);//
-        startActivityForResult(Intent.createChooser(intent, "Select File"), SELECT_FILE);
+        startActivityForResult(Intent.createChooser(intent, getString(R.string.selectFile)), SELECT_FILE);
     }
     private void cameraIntent() {
         Intent intent = new Intent(MediaStore.ACTION_IMAGE_CAPTURE);

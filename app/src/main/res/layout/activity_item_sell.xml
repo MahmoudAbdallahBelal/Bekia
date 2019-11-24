@@ -56,7 +56,7 @@
 
             android:layout_margin="20dp"
             android:id="@+id/edit_item_name"
-            android:hint="Enter name"
+            android:hint="@string/enter_name"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"/>
 
@@ -64,7 +64,7 @@
             android:layout_margin="20dp"
             android:gravity="start"
             android:id="@+id/edit_item_desc"
-            android:hint="item description"
+            android:hint="@string/item_description"
             android:layout_width="match_parent"
             android:layout_height="120dp"/>
 
@@ -73,7 +73,7 @@
             android:inputType="phone"
             android:gravity="start"
             android:id="@+id/edit_item_phone"
-            android:hint="your phone"
+            android:hint="@string/your_phone"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"/>
 
@@ -86,7 +86,7 @@
             android:focusableInTouchMode="true"
             android:gravity="center"
             android:id="@+id/edit_item_category"
-            android:text="Item Category"
+            android:text="@string/item_category"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"/>
 
@@ -98,7 +98,7 @@
             android:focusableInTouchMode="true"
             android:gravity="center"
             android:id="@+id/edit_item_sub_category"
-            android:text="Item Sub Category"
+            android:text="@string/item_sub_category"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"/>
 
@@ -112,7 +112,7 @@
             android:focusableInTouchMode="true"
             android:gravity="center"
             android:id="@+id/edit_item_city"
-            android:text="Item City"
+            android:text="@string/item_city"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"/>
 
@@ -132,12 +132,12 @@
             android:focusableInTouchMode="true"
             android:gravity="start"
             android:id="@+id/edit_item_price"
-            android:hint="Item Price"
+            android:hint="@string/item_price"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"/>
            <CheckBox
                android:id="@+id/check_is_negotiable"
-               android:text="is negotiable "
+               android:text="@string/is_negotiable"
                android:layout_gravity="center"
                android:layout_weight="1"
                android:layout_width="match_parent"
@@ -170,7 +170,7 @@
         android:layout_margin="30dp"
         android:layout_alignParentBottom="true"
         android:id="@+id/sell_item_button"
-        android:text="Sell Item"
+        android:text="@string/sell_item"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"></Button>
 

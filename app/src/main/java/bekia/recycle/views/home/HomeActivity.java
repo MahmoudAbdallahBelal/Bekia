@@ -39,6 +39,8 @@ import bekia.recycle.views.settings.SettingsActivity;
 import bekia.recycle.views.user_items.UserItemsActivity;
 import de.hdodenhof.circleimageview.CircleImageView;
 
+import static bekia.recycle.R.*;
+
 
 public class HomeActivity extends AppCompatActivity
         implements NavigationView.OnNavigationItemSelectedListener {
@@ -53,17 +55,17 @@ public class HomeActivity extends AppCompatActivity
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
-        setContentView(R.layout.activity_home);
-        Toolbar toolbar = (Toolbar) findViewById(R.id.toolbar);
+        setContentView(layout.activity_home);
+        Toolbar toolbar = (Toolbar) findViewById(id.toolbar);
         setSupportActionBar(toolbar);
 
 
 
-        tabLayout=(TabLayout)findViewById(R.id.tabLayout);
-        viewPager=(ViewPager)findViewById(R.id.viewPager);
+        tabLayout=(TabLayout)findViewById(id.tabLayout);
+        viewPager=(ViewPager)findViewById(id.viewPager);
 
-        tabLayout.addTab(tabLayout.newTab().setText("Categories"));
-        tabLayout.addTab(tabLayout.newTab().setText("Most Popular"));
+        tabLayout.addTab(tabLayout.newTab().setText(getString(R.string.categories)));
+        tabLayout.addTab(tabLayout.newTab().setText(getString(R.string.mostPopular)));
         tabLayout.setTabGravity(TabLayout.GRAVITY_FILL);
 
         final TabsAdapter adapter = new TabsAdapter(this,getSupportFragmentManager(), tabLayout.getTabCount());
@@ -88,23 +90,23 @@ public class HomeActivity extends AppCompatActivity
             }
         });
 
-        DrawerLayout drawer = (DrawerLayout) findViewById(R.id.drawer_layout);
+        DrawerLayout drawer = (DrawerLayout) findViewById(id.drawer_layout);
         ActionBarDrawerToggle toggle = new ActionBarDrawerToggle(
-                this, drawer, toolbar, R.string.navigation_drawer_open, R.string.navigation_drawer_close);
+                this, drawer, toolbar, string.navigation_drawer_open, string.navigation_drawer_close);
         drawer.addDrawerListener(toggle);
         toggle.syncState();
 
-        NavigationView navigationView = (NavigationView) findViewById(R.id.nav_view);
+        NavigationView navigationView = (NavigationView) findViewById(id.nav_view);
         navigationView.setNavigationItemSelectedListener(this);
 
 
-        View header = ((NavigationView)findViewById(R.id.nav_view)).getHeaderView(0);
-        TextView txtName = header.findViewById(R.id.textView_profile_name);
-        imageProfile  = header.findViewById(R.id.imageView_user_profile_home);
-        imageSellItem = findViewById(R.id.imageView_toolbar_sell_item);
-        imageSearchItem = findViewById(R.id.imageView_toolbar_search_item);
-        categoriesTxt = findViewById(R.id.text_home_select_categories);
-        mostPopularTxt = findViewById(R.id.text_home_select_most_populars);
+        View header = ((NavigationView)findViewById(id.nav_view)).getHeaderView(0);
+        TextView txtName = header.findViewById(id.textView_profile_name);
+        imageProfile  = header.findViewById(id.imageView_user_profile_home);
+        imageSellItem = findViewById(id.imageView_toolbar_sell_item);
+        imageSearchItem = findViewById(id.imageView_toolbar_search_item);
+        categoriesTxt = findViewById(id.text_home_select_categories);
+        mostPopularTxt = findViewById(id.text_home_select_most_populars);
         imageSearchItem.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
@@ -166,12 +168,12 @@ public class HomeActivity extends AppCompatActivity
 
         }
 
-        FloatingActionButton fab = (FloatingActionButton) findViewById(R.id.fab);
+        FloatingActionButton fab = (FloatingActionButton) findViewById(id.fab);
         fab.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view) {
-                Snackbar.make(view, "Replace with your own action", Snackbar.LENGTH_LONG)
-                        .setAction("Action", null).show();
+                Snackbar.make(view, getString(R.string.fab), Snackbar.LENGTH_LONG)
+                        .setAction(getString(R.string.action), null).show();
             }
         });
 
@@ -189,7 +191,7 @@ public class HomeActivity extends AppCompatActivity
 
     @Override
     public void onBackPressed() {
-        DrawerLayout drawer = (DrawerLayout) findViewById(R.id.drawer_layout);
+        DrawerLayout drawer = (DrawerLayout) findViewById(id.drawer_layout);
         if (drawer.isDrawerOpen(GravityCompat.START)) {
             drawer.closeDrawer(GravityCompat.START);
         } else {
@@ -282,7 +284,7 @@ public class HomeActivity extends AppCompatActivity
         try {
             startActivity(myAppLinkToMarket);
         } catch (ActivityNotFoundException e) {
-            Toast.makeText(this, " App Not found on the market yet", Toast.LENGTH_LONG).show();
+            Toast.makeText(this, getString(R.string.appNotFound), Toast.LENGTH_LONG).show();
         }
     }
 
@@ -303,10 +305,10 @@ public class HomeActivity extends AppCompatActivity
             Intent shareIntent = new Intent(Intent.ACTION_SEND);
             shareIntent.setType("text/plain");
             shareIntent.putExtra(Intent.EXTRA_SUBJECT, "My application name");
-            String shareMessage= "\nLet me recommend you this application\n\n";
+            String shareMessage= getString(R.string.recomndationMessage);
             shareMessage = shareMessage + "https://play.google.com/store/apps/details?id=" + BuildConfig.APPLICATION_ID +"\n\n";
             shareIntent.putExtra(Intent.EXTRA_TEXT, shareMessage);
-            startActivity(Intent.createChooser(shareIntent, "choose one"));
+            startActivity(Intent.createChooser(shareIntent, getString(R.string.chooseOne)));
         } catch(Exception e) {
             Toast.makeText(this, ""+e.getMessage(), Toast.LENGTH_SHORT).show();        }
 

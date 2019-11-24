@@ -30,7 +30,7 @@
             android:id="@+id/button_sell_item_delete_image"
             android:layout_width="160dp"
             android:layout_height="30dp"
-            android:text="Delete"
+            android:text="@string/delete"
             android:textSize="11sp"
             android:background="#4d0b0b"
             android:textColor="@color/cardview_light_background"

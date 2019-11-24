@@ -8,8 +8,6 @@
     android:layout_gravity="center"
     tools:context=".views.chat.create_chat_message.CreateChatMessageActivity">
 
-
-
     <LinearLayout
         android:layout_alignParentBottom="true"
         android:orientation="horizontal"
@@ -17,7 +15,7 @@
         android:layout_height="wrap_content">
 
         <EditText
-            android:hint="Type message"
+            android:hint="@string/type_message"
             android:layout_weight="1"
             android:id="@+id/edit_type_message"
             android:layout_width="match_parent"

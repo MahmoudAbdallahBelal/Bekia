@@ -31,7 +31,7 @@
             android:id="@+id/text_sub_category"
             android:layout_width="match_parent"
             android:layout_height="30dp"
-            android:text="sub - category"
+            android:text="@string/sub_category"
             android:textSize="18sp"
             android:textColor="@color/colorWhite"
             />

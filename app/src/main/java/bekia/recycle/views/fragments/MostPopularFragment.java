@@ -96,7 +96,8 @@ public class MostPopularFragment extends Fragment {
                 if(response.raw().code() == 200)
                 {
                     mostPopularList = response.body().getItems();
-                    mostPopularItemsAdapter = new MostPopularItemsAdapter(mostPopularList, getActivity(), new OnItemClickListener() {
+                    mostPopularItemsAdapter = new MostPopularItemsAdapter(mostPopularList,
+                            getActivity(), new OnItemClickListener() {
                         @Override
                         public void onItemClick(CategoryDetails item) {
 

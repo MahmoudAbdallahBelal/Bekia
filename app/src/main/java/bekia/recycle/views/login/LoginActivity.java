@@ -31,6 +31,8 @@ import retrofit2.Call;
 import retrofit2.Callback;
 import retrofit2.Response;
 
+import static bekia.recycle.helper.Utils.retrieveUserLanguage;
+
 public class LoginActivity extends AppCompatActivity {
 
     AutoCompleteTextView userNameEdit, passwordEdit;
@@ -88,7 +90,7 @@ public class LoginActivity extends AppCompatActivity {
         LoginRequest loginRequest = new LoginRequest();
         loginRequest.setPassword(password);
         loginRequest.setPhone(phone);
-        Call<LoginResponse> call = apiService.loginApi("en" ,loginRequest );
+        Call<LoginResponse> call = apiService.loginApi(retrieveUserLanguage(getApplicationContext()) ,loginRequest );
         call.enqueue(new Callback<LoginResponse>() {
             @Override
             public void onResponse(Call<LoginResponse>call, Response<LoginResponse> response) {
@@ -147,7 +149,7 @@ public class LoginActivity extends AppCompatActivity {
 
             @Override
             public void onFailure(Call<ProfileResponse> call, Throwable t) {
-                Toast.makeText(LoginActivity.this, "invalid data" , Toast.LENGTH_SHORT).show();
+                Toast.makeText(LoginActivity.this, getString(R.string.invalidData) , Toast.LENGTH_SHORT).show();
 
             }
         });

@@ -12,7 +12,7 @@
         android:layout_height="wrap_content"
         android:layout_marginTop="5dp"
         android:inputType="text"
-        android:text="ادراج صورة "
+        android:text="@string/select_image"
         android:textColor="#000"
         android:textSize="20sp" />
 

@@ -21,8 +21,8 @@ public class TestActivity extends AppCompatActivity {
         tabLayout=(TabLayout)findViewById(R.id.tabLayout);
         viewPager=(ViewPager)findViewById(R.id.viewPager);
 
-        tabLayout.addTab(tabLayout.newTab().setText("Categories"));
-        tabLayout.addTab(tabLayout.newTab().setText("Most Popular"));
+        tabLayout.addTab(tabLayout.newTab().setText(getString(R.string.categories)));
+        tabLayout.addTab(tabLayout.newTab().setText(getString(R.string.mostPopular)));
         tabLayout.setTabGravity(TabLayout.GRAVITY_FILL);
 
         final TabsAdapter adapter = new TabsAdapter(this,getSupportFragmentManager(), tabLayout.getTabCount());
