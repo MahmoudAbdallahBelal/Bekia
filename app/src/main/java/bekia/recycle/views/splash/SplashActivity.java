@@ -2,18 +2,21 @@ package bekia.recycle.views.splash;
 
 import android.content.Intent;
 import android.os.Handler;
-import android.support.v7.app.AppCompatActivity;
+import androidx.appcompat.app.AppCompatActivity;
 import android.os.Bundle;
 
 import bekia.recycle.R;
+import bekia.recycle.helper.Utils;
 import bekia.recycle.views.login.LoginActivity;
+import bekia.recycle.views.settings.SettingsActivity;
 
 public class SplashActivity extends AppCompatActivity {
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
-        setContentView(R.layout.activity_splash);
+            setContentView(R.layout.activity_splash);
+
 
        /* ApiInterface apiService =
                 ApiClient.getClient().create(ApiInterface.class);

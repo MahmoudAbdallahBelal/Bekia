@@ -1,0 +1,14 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <string name="app_name">TIM</string>
+    <string name="app_name_mean">Müll Industrie Marketing</string>
+
+    <string name="email_or_mobile_login">E-Mail / Handy</string>
+    <string name="password_login">Passwort</string>
+    <string name="login_button">Einloggen</string>
+    <string name="register_button">Anmelden</string>
+    <string name="forget_password_button"><u>Passwort vergessen</u></string>
+    <string name="user_type">Benutzerin</string>
+    <string name="company_type">Unternehmen</string>
+
+</resources>

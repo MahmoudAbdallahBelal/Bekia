@@ -1,0 +1,89 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:orientation="vertical"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent">
+
+
+<FrameLayout
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content">
+
+  <androidx.recyclerview.widget.RecyclerView
+      android:padding="10dp"
+      android:layout_marginRight="12dp"
+      android:layout_marginLeft="12dp"
+      android:layout_marginTop="12dp"
+      android:background="@drawable/category_border"
+      android:id="@+id/recycle_item_images"
+      android:layout_width="match_parent"
+      android:layout_height="wrap_content"
+      />
+  <TextView
+      android:id="@+id/text_no_images"
+      android:visibility="gone"
+      android:textColor="@color/colorBlack"
+      android:gravity="center"
+      android:layout_gravity="center"
+      android:text="No Images for this Item"
+      android:layout_width="match_parent"
+      android:layout_height="match_parent"/>
+</FrameLayout>
+
+  <LinearLayout
+      android:layout_margin="10dp"
+      android:orientation="horizontal"
+      android:layout_width="match_parent"
+      android:layout_height="wrap_content">
+
+
+
+
+    <ImageView
+        android:layout_margin="5dp"
+        android:layout_marginTop="5dp"
+        android:layout_marginRight="12dp"
+        android:layout_marginLeft="12dp"
+        android:layout_gravity="top|start"
+        android:layout_width="50dp"
+        android:layout_height="50dp"/>
+    <ImageView
+        android:layout_margin="5dp"
+        android:layout_marginTop="5dp"
+        android:layout_marginRight="12dp"
+        android:layout_marginLeft="12dp"
+        android:layout_gravity="top|start"
+        android:layout_width="50dp"
+        android:layout_height="50dp"/>
+    <ImageView
+
+        android:layout_margin="5dp"
+        android:id="@+id/image_like_item"
+        android:layout_marginTop="5dp"
+        android:layout_marginRight="12dp"
+        android:layout_marginLeft="12dp"
+        android:layout_gravity="top|end"
+        android:background="@drawable/ic_unfavourite"
+        android:layout_width="50dp"
+        android:layout_height="50dp"/>
+    <ImageView
+        android:layout_margin="5dp"
+        android:layout_marginTop="5dp"
+        android:layout_marginRight="12dp"
+        android:layout_marginLeft="12dp"
+        android:layout_gravity="top|start"
+        android:layout_width="50dp"
+        android:layout_height="50dp"/>
+  <ImageView
+      android:id="@+id/image_chat_item"
+      android:layout_marginTop="5dp"
+      android:layout_marginRight="25dp"
+      android:layout_marginLeft="0dp"
+      android:layout_gravity="top|start"
+      android:background="@drawable/ic_iconfinder_65_fb_messenger_1181188"
+      android:layout_width="50dp"
+      android:layout_height="50dp"/>
+  </LinearLayout>
+
+</LinearLayout>

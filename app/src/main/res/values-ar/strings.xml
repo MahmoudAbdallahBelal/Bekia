@@ -1,0 +1,15 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <string name="app_name">TIM</string>
+    <string name="app_name_mean">تسويق صناعة القمامة</string>
+
+    <string name="email_or_mobile_login">أدخل الايميل / الموبايل</string>
+    <string name="password_login">الرقم السري</string>
+    <string name="login_button">الدخول</string>
+    <string name="register_button">التسجيل</string>
+    <string name="forget_password_button"><u>نسيت الرقم السري</u></string>
+    <string name="user_type"> مستخدم</string>
+    <string name="company_type">شركة</string>
+
+
+</resources>

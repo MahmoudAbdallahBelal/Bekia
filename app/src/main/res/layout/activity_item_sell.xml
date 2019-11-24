@@ -1,0 +1,178 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".views.sell_item.ItemSellActivity">
+
+    <ScrollView
+                xmlns:android="http://schemas.android.com/apk/res/android"
+                xmlns:tools="http://schemas.android.com/tools"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                >
+    <LinearLayout
+        android:layout_marginBottom="50dp"
+        xmlns:android="http://schemas.android.com/apk/res/android"
+        xmlns:tools="http://schemas.android.com/tools"
+        android:layout_width="match_parent"
+        android:orientation="vertical"
+        android:layout_height="match_parent"
+        tools:context=".views.sell_item.ItemSellActivity">
+
+
+    <LinearLayout
+        android:orientation="vertical"
+        android:layout_weight="1"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent">
+
+        <androidx.recyclerview.widget.RecyclerView
+            android:id="@+id/recycle_item_sell"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"/>
+
+        <Button
+            android:textColor="@color/colorWhite"
+            android:background="#000"
+            android:layout_margin="30dp"
+            android:id="@+id/button_upload_item_sell_images"
+            android:text="@string/add_item_take_photos"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"/>
+
+
+
+    </LinearLayout>
+
+    <LinearLayout
+        android:orientation="vertical"
+        android:layout_weight="1"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent">
+
+
+        <EditText
+
+            android:layout_margin="20dp"
+            android:id="@+id/edit_item_name"
+            android:hint="Enter name"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"/>
+
+        <EditText
+            android:layout_margin="20dp"
+            android:gravity="start"
+            android:id="@+id/edit_item_desc"
+            android:hint="item description"
+            android:layout_width="match_parent"
+            android:layout_height="120dp"/>
+
+        <EditText
+            android:layout_margin="20dp"
+            android:inputType="phone"
+            android:gravity="start"
+            android:id="@+id/edit_item_phone"
+            android:hint="your phone"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"/>
+
+        <Button
+
+            android:background="@color/colorBlack"
+            android:textColor="@color/colorWhite"
+            android:layout_margin="20dp"
+            android:editable="false"
+            android:focusableInTouchMode="true"
+            android:gravity="center"
+            android:id="@+id/edit_item_category"
+            android:text="Item Category"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"/>
+
+        <Button
+            android:background="@color/colorBlack"
+            android:textColor="@color/colorWhite"
+            android:editable="false"
+            android:layout_margin="20dp"
+            android:focusableInTouchMode="true"
+            android:gravity="center"
+            android:id="@+id/edit_item_sub_category"
+            android:text="Item Sub Category"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"/>
+
+
+        <Button
+
+            android:background="@color/colorBlack"
+            android:textColor="@color/colorWhite"
+            android:layout_margin="20dp"
+            android:editable="false"
+            android:focusableInTouchMode="true"
+            android:gravity="center"
+            android:id="@+id/edit_item_city"
+            android:text="Item City"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"/>
+
+
+
+       <LinearLayout
+           android:layout_marginBottom="100dp"
+           android:layout_marginLeft="20dp"
+           android:layout_marginRight="20dp"
+           android:layout_width="match_parent"
+           android:layout_height="wrap_content">
+        <EditText
+            android:layout_margin="20dp"
+
+            android:inputType="number"
+            android:layout_weight="1"
+            android:focusableInTouchMode="true"
+            android:gravity="start"
+            android:id="@+id/edit_item_price"
+            android:hint="Item Price"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"/>
+           <CheckBox
+               android:id="@+id/check_is_negotiable"
+               android:text="is negotiable "
+               android:layout_gravity="center"
+               android:layout_weight="1"
+               android:layout_width="match_parent"
+               android:layout_height="wrap_content"/>
+       </LinearLayout>
+
+
+
+    </LinearLayout>
+
+
+
+
+</LinearLayout>
+</ScrollView>
+    <ProgressBar
+
+        android:layout_marginLeft="160dp"
+        android:layout_marginRight="160dp"
+        android:layout_above="@+id/sell_item_button"
+        android:visibility="gone"
+        android:id="@+id/progress_add_item"
+        android:layout_gravity="center"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"/>
+
+    <Button
+        android:textColor="@color/colorWhite"
+        android:background="#000"
+        android:layout_margin="30dp"
+        android:layout_alignParentBottom="true"
+        android:id="@+id/sell_item_button"
+        android:text="Sell Item"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"></Button>
+
+
+</RelativeLayout>
