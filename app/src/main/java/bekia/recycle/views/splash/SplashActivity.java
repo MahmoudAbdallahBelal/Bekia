@@ -12,12 +12,14 @@ import bekia.recycle.R;
 import bekia.recycle.views.LocaleManager;
 import bekia.recycle.views.login.LoginActivity;
 
+import static bekia.recycle.views.settings.SettingsActivity.lan;
+
 public class SplashActivity extends AppCompatActivity {
 
 
     @Override
     protected void attachBaseContext(Context base) {
-        super.attachBaseContext(LocaleManager.setLocale(base, "fr"));
+        super.attachBaseContext(LocaleManager.setLocale(base, lan));
     }
 
     @Override

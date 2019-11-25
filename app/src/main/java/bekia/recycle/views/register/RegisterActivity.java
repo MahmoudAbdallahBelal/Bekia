@@ -57,6 +57,7 @@ import bekia.recycle.requests.city.CityDetails;
 import bekia.recycle.requests.city.CityResponse;
 import bekia.recycle.requests.register.RegisterRequest;
 import bekia.recycle.requests.register.RegisterResponse;
+import bekia.recycle.views.LocaleManager;
 import bekia.recycle.views.login.LoginActivity;
 import bekia.recycle.web.ApiClient;
 import bekia.recycle.web.ApiInterface;
@@ -66,6 +67,7 @@ import retrofit2.Response;
 
 import static android.Manifest.permission.CAMERA;
 import static bekia.recycle.helper.Utils.retrieveUserLanguage;
+import static bekia.recycle.views.settings.SettingsActivity.lan;
 
 public class RegisterActivity extends AppCompatActivity {
 
@@ -84,6 +86,10 @@ public class RegisterActivity extends AppCompatActivity {
     private String userChoosenTask = null;
 
     private boolean result = false;
+    @Override
+    protected void attachBaseContext(Context base) {
+        super.attachBaseContext(LocaleManager.setLocale(base,lan));
+    }
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);

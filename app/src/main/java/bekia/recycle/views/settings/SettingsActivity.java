@@ -13,6 +13,7 @@ import android.widget.Button;
 public class SettingsActivity extends AppCompatActivity {
 
     private Button arBtn , enBtn ,frBtn , grBtn ;
+    public static  String lan="en";
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -28,6 +29,7 @@ public class SettingsActivity extends AppCompatActivity {
         arBtn.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
+                lan="ar";
                 Utils.saveUserLanguage(SettingsActivity.this, "ar");
                 Intent intent = new Intent(SettingsActivity.this , SplashActivity.class);
                 startActivity(intent);
@@ -37,6 +39,8 @@ public class SettingsActivity extends AppCompatActivity {
         enBtn.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
+                lan="en";
+
                 Utils.saveUserLanguage(SettingsActivity.this, "en");
                 Intent intent = new Intent(SettingsActivity.this , SplashActivity.class);
                 startActivity(intent);
@@ -45,6 +49,8 @@ public class SettingsActivity extends AppCompatActivity {
         frBtn.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
+                lan="fr";
+
                 Utils.saveUserLanguage(SettingsActivity.this, "fr");
                 Intent intent = new Intent(SettingsActivity.this , SplashActivity.class);
                 startActivity(intent);
@@ -53,7 +59,9 @@ public class SettingsActivity extends AppCompatActivity {
         grBtn.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
-                Utils.saveUserLanguage(SettingsActivity.this, "gr");
+                lan="de";
+
+                Utils.saveUserLanguage(SettingsActivity.this, "de");
                 Intent intent = new Intent(SettingsActivity.this , SplashActivity.class);
                 startActivity(intent);
             }

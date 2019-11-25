@@ -2,6 +2,7 @@ package bekia.recycle.views.forget_password;
 
 import androidx.appcompat.app.AppCompatActivity;
 
+import android.content.Context;
 import android.content.Intent;
 import android.os.Bundle;
 import android.view.View;
@@ -16,6 +17,7 @@ import bekia.recycle.requests.forget_password.ForgetPasswordRes;
 import bekia.recycle.requests.forget_password.ForgetPasswordRq;
 import bekia.recycle.requests.login.LoginRequest;
 import bekia.recycle.requests.login.LoginResponse;
+import bekia.recycle.views.LocaleManager;
 import bekia.recycle.views.login.LoginActivity;
 import bekia.recycle.web.ApiClient;
 import bekia.recycle.web.ApiInterface;
@@ -23,12 +25,18 @@ import retrofit2.Call;
 import retrofit2.Callback;
 import retrofit2.Response;
 
+import static bekia.recycle.views.settings.SettingsActivity.lan;
+
 public class ForgetPasswordActivity extends AppCompatActivity {
 
     EditText forgetPasswordEdit;
     Button restorePasswordBtn;
     ProgressBar progressBarResetPassword;
 
+    @Override
+    protected void attachBaseContext(Context base) {
+        super.attachBaseContext(LocaleManager.setLocale(base,lan));
+    }
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
