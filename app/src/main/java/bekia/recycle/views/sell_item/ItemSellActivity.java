@@ -18,6 +18,7 @@ import bekia.recycle.requests.city.CityResponse;
 import bekia.recycle.requests.items_response.ItemDetailsReponse;
 import bekia.recycle.requests.login.LoginResponse;
 import bekia.recycle.requests.register.RegisterResponse;
+import bekia.recycle.views.LocaleManager;
 import bekia.recycle.views.home.HomeActivity;
 import bekia.recycle.views.profile.UserProfileActivity;
 import bekia.recycle.views.register.RegisterActivity;
@@ -61,6 +62,7 @@ import java.util.ArrayList;
 import java.util.List;
 
 import static bekia.recycle.helper.Utils.retrieveUserLanguage;
+import static bekia.recycle.views.settings.SettingsActivity.lan;
 
 public class ItemSellActivity extends AppCompatActivity {
 
@@ -83,6 +85,13 @@ public class ItemSellActivity extends AppCompatActivity {
     int categoryId = 0;
 
 ProgressBar progressBarAddItem ;
+
+
+    @Override
+    protected void attachBaseContext(Context base) {
+        super.attachBaseContext(LocaleManager.setLocale(base,lan));
+    }
+
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);

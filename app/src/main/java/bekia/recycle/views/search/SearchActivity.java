@@ -13,6 +13,7 @@ import bekia.recycle.requests.categories.CategoryDetails;
 import bekia.recycle.requests.items_response.GetItemsResponse;
 import bekia.recycle.requests.items_response.ItemDetailsReponse;
 import bekia.recycle.requests.login.LoginResponse;
+import bekia.recycle.views.LocaleManager;
 import bekia.recycle.views.item_details.ItemDetailsActivity;
 import bekia.recycle.web.ApiClient;
 import bekia.recycle.web.ApiInterface;
@@ -20,6 +21,7 @@ import retrofit2.Call;
 import retrofit2.Callback;
 import retrofit2.Response;
 
+import android.content.Context;
 import android.content.Intent;
 import android.os.Bundle;
 import android.view.View;
@@ -31,6 +33,8 @@ import android.widget.Toast;
 
 import java.util.List;
 
+import static bekia.recycle.views.settings.SettingsActivity.lan;
+
 public class SearchActivity extends AppCompatActivity {
 
     private EditText searchEdit;
@@ -38,6 +42,11 @@ public class SearchActivity extends AppCompatActivity {
     private RecyclerView recyclerViewSearchItems;
     private TextView notFoundTxt;
     private ProgressBar progressBarSearch;
+
+    @Override
+    protected void attachBaseContext(Context base) {
+        super.attachBaseContext(LocaleManager.setLocale(base,lan));
+    }
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {

@@ -43,6 +43,7 @@ public class LoginActivity extends AppCompatActivity {
     TextView forgetPasswordTxt;
     ProgressBar progressBarLogin;
 
+
     @Override
     protected void attachBaseContext(Context base) {
         super.attachBaseContext(LocaleManager.setLocale(base,lan));

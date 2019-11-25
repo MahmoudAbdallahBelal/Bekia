@@ -1,5 +1,6 @@
 package bekia.recycle.views.item_details;
 
+import android.content.Context;
 import android.content.Intent;
 import android.graphics.Bitmap;
 import android.graphics.BitmapFactory;
@@ -28,6 +29,7 @@ import bekia.recycle.requests.chat.create_chat.CreateChatResponse;
 import bekia.recycle.requests.favorite_like_unlike.LikeUnlikeResponse;
 import bekia.recycle.requests.items_response.ItemDetailsReponse;
 import bekia.recycle.requests.login.LoginResponse;
+import bekia.recycle.views.LocaleManager;
 import bekia.recycle.views.chat.create_chat_message.CreateChatMessageActivity;
 import bekia.recycle.web.ApiClient;
 import bekia.recycle.web.ApiInterface;
@@ -37,6 +39,7 @@ import retrofit2.Response;
 
 import static bekia.recycle.helper.Constants.itemDetails;
 import static bekia.recycle.helper.Utils.retrieveUserLanguage;
+import static bekia.recycle.views.settings.SettingsActivity.lan;
 
 
 public class ItemDetailsActivity extends AppCompatActivity {
@@ -48,6 +51,11 @@ public class ItemDetailsActivity extends AppCompatActivity {
 
     boolean isFavourite = false;
 
+
+    @Override
+    protected void attachBaseContext(Context base) {
+        super.attachBaseContext(LocaleManager.setLocale(base,lan));
+    }
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {

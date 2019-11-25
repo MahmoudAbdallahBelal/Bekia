@@ -1,6 +1,7 @@
 package bekia.recycle.views.home;
 
 import android.content.ActivityNotFoundException;
+import android.content.Context;
 import android.content.Intent;
 import android.graphics.Bitmap;
 import android.graphics.BitmapFactory;
@@ -30,6 +31,7 @@ import bekia.recycle.R;
 import bekia.recycle.adapters.TabsAdapter;
 import bekia.recycle.helper.Utils;
 import bekia.recycle.requests.login.LoginResponse;
+import bekia.recycle.views.LocaleManager;
 import bekia.recycle.views.chat.user_chats.UserChatsActivity;
 import bekia.recycle.views.login.LoginActivity;
 import bekia.recycle.views.search.SearchActivity;
@@ -40,6 +42,8 @@ import bekia.recycle.views.user_items.UserItemsActivity;
 import de.hdodenhof.circleimageview.CircleImageView;
 
 import static bekia.recycle.R.*;
+import static bekia.recycle.helper.Utils.retrieveUserLanguage;
+import static bekia.recycle.views.settings.SettingsActivity.lan;
 
 
 public class HomeActivity extends AppCompatActivity
@@ -51,6 +55,10 @@ public class HomeActivity extends AppCompatActivity
 
     TabLayout tabLayout;
     ViewPager viewPager;
+    @Override
+    protected void attachBaseContext(Context base) {
+        super.attachBaseContext(LocaleManager.setLocale(base,lan));
+    }
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {

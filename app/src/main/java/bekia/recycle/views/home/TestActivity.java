@@ -4,15 +4,23 @@ import androidx.appcompat.app.AppCompatActivity;
 import androidx.viewpager.widget.ViewPager;
 import bekia.recycle.R;
 import bekia.recycle.adapters.TabsAdapter;
+import bekia.recycle.views.LocaleManager;
 
+import android.content.Context;
 import android.os.Bundle;
 
 import com.google.android.material.tabs.TabLayout;
+
+import static bekia.recycle.views.settings.SettingsActivity.lan;
 
 public class TestActivity extends AppCompatActivity {
 
     TabLayout tabLayout;
     ViewPager viewPager;
+    @Override
+    protected void attachBaseContext(Context base) {
+        super.attachBaseContext(LocaleManager.setLocale(base,lan));
+    }
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);

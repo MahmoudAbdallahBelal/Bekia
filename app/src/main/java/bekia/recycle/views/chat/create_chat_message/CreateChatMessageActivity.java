@@ -17,6 +17,7 @@ import bekia.recycle.requests.chat.get_chat_messages.GetChatMessagesResponse;
 import bekia.recycle.requests.chat.get_chat_messages.MessagesDetails;
 import bekia.recycle.requests.items_response.ItemDetailsReponse;
 import bekia.recycle.requests.login.LoginResponse;
+import bekia.recycle.views.LocaleManager;
 import bekia.recycle.views.sub_cat_items.SubCatItemsActivity;
 import bekia.recycle.views.sub_categories.SubCategoriesActivity;
 import bekia.recycle.web.ApiClient;
@@ -26,6 +27,7 @@ import retrofit2.Call;
 import retrofit2.Callback;
 import retrofit2.Response;
 
+import android.content.Context;
 import android.content.Intent;
 import android.os.Bundle;
 import android.util.Log;
@@ -39,6 +41,7 @@ import java.util.ArrayList;
 import java.util.List;
 
 import static bekia.recycle.helper.Utils.retrieveUserLanguage;
+import static bekia.recycle.views.settings.SettingsActivity.lan;
 
 public class CreateChatMessageActivity extends AppCompatActivity {
 
@@ -49,6 +52,10 @@ public class CreateChatMessageActivity extends AppCompatActivity {
     private List<MessagesDetails> chatMessagesResponseList = new ArrayList<>();
     private ChatMessagesAdapter chatMessagesAdapter;
 
+    @Override
+    protected void attachBaseContext(Context base) {
+        super.attachBaseContext(LocaleManager.setLocale(base,lan));
+    }
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {

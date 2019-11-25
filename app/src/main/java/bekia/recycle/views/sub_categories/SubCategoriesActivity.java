@@ -12,6 +12,7 @@ import bekia.recycle.helper.OnItemClickListener;
 import bekia.recycle.requests.categories.CategoriesResponse;
 import bekia.recycle.requests.categories.CategoryDetails;
 import bekia.recycle.requests.items_response.ItemDetailsReponse;
+import bekia.recycle.views.LocaleManager;
 import bekia.recycle.views.home.HomeActivity;
 import bekia.recycle.views.sub_cat_items.SubCatItemsActivity;
 import bekia.recycle.web.ApiClient;
@@ -20,6 +21,7 @@ import retrofit2.Call;
 import retrofit2.Callback;
 import retrofit2.Response;
 
+import android.content.Context;
 import android.content.Intent;
 import android.os.Bundle;
 import android.view.View;
@@ -30,6 +32,7 @@ import android.widget.Toast;
 import java.util.List;
 
 import static bekia.recycle.helper.Utils.retrieveUserLanguage;
+import static bekia.recycle.views.settings.SettingsActivity.lan;
 
 public class SubCategoriesActivity extends AppCompatActivity {
 
@@ -37,6 +40,10 @@ public class SubCategoriesActivity extends AppCompatActivity {
     RecyclerView recyclerSubCategories;
     ProgressBar progressBarSubCategories;
 
+    @Override
+    protected void attachBaseContext(Context base) {
+        super.attachBaseContext(LocaleManager.setLocale(base,lan));
+    }
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
