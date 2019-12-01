@@ -14,6 +14,8 @@ import android.widget.ProgressBar;
 import android.widget.TextView;
 import android.widget.Toast;
 
+import com.akexorcist.localizationactivity.ui.LocalizationActivity;
+
 import bekia.recycle.R;
 import bekia.recycle.helper.Utils;
 import bekia.recycle.requests.login.LoginRequest;
@@ -36,7 +38,7 @@ import retrofit2.Response;
 import static bekia.recycle.helper.Utils.retrieveUserLanguage;
 import static bekia.recycle.views.settings.SettingsActivity.lan;
 
-public class LoginActivity extends AppCompatActivity {
+public class LoginActivity extends LocalizationActivity {
 
     AutoCompleteTextView userNameEdit, passwordEdit;
     Button loginBtn, registerBtn;
@@ -49,7 +51,8 @@ public class LoginActivity extends AppCompatActivity {
         super.attachBaseContext(LocaleManager.setLocale(base,lan));
     }
     @Override
-    protected void onCreate(Bundle savedInstanceState) {
+    public void onCreate(Bundle savedInstanceState) {
+        setLanguage(lan);
         super.onCreate(savedInstanceState);
         if(Utils.retrieveUserInfo(this)!= null)
         {

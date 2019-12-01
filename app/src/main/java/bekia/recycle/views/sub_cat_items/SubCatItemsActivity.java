@@ -30,11 +30,14 @@ import android.widget.ProgressBar;
 import android.widget.TextView;
 import android.widget.Toast;
 
+import com.akexorcist.localizationactivity.ui.LocalizationActivity;
+
 import java.util.List;
 
 import static bekia.recycle.helper.Utils.retrieveUserLanguage;
+import static bekia.recycle.views.settings.SettingsActivity.lan;
 
-public class SubCatItemsActivity extends AppCompatActivity {
+public class SubCatItemsActivity extends LocalizationActivity {
 
 
     int categoryId;
@@ -43,7 +46,8 @@ public class SubCatItemsActivity extends AppCompatActivity {
 
     TextView txTNoItems;
     @Override
-    protected void onCreate(Bundle savedInstanceState) {
+    public void onCreate(Bundle savedInstanceState) {
+        setLanguage(lan);
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_sub_cat_items);
 
@@ -67,7 +71,7 @@ public class SubCatItemsActivity extends AppCompatActivity {
 
 
     @Override
-    protected void onResume() {
+    public void onResume() {
         super.onResume();
         if(getIntent().getIntExtra("sub_category_id" , 0)!= 0)
         {

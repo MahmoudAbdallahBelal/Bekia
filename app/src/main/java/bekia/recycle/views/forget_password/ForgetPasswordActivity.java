@@ -11,6 +11,8 @@ import android.widget.EditText;
 import android.widget.ProgressBar;
 import android.widget.Toast;
 
+import com.akexorcist.localizationactivity.ui.LocalizationActivity;
+
 import bekia.recycle.R;
 import bekia.recycle.helper.Utils;
 import bekia.recycle.requests.forget_password.ForgetPasswordRes;
@@ -27,7 +29,7 @@ import retrofit2.Response;
 
 import static bekia.recycle.views.settings.SettingsActivity.lan;
 
-public class ForgetPasswordActivity extends AppCompatActivity {
+public class ForgetPasswordActivity extends LocalizationActivity {
 
     EditText forgetPasswordEdit;
     Button restorePasswordBtn;
@@ -38,7 +40,8 @@ public class ForgetPasswordActivity extends AppCompatActivity {
         super.attachBaseContext(LocaleManager.setLocale(base,lan));
     }
     @Override
-    protected void onCreate(Bundle savedInstanceState) {
+    public void onCreate(Bundle savedInstanceState) {
+        setLanguage(lan);
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_forget_password);
 

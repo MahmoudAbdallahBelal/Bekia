@@ -7,9 +7,11 @@ import bekia.recycle.views.LocaleManager;
 import android.content.Context;
 import android.os.Bundle;
 
+import com.akexorcist.localizationactivity.ui.LocalizationActivity;
+
 import static bekia.recycle.views.settings.SettingsActivity.lan;
 
-public class CategoryItemsActivity extends AppCompatActivity {
+public class CategoryItemsActivity extends LocalizationActivity {
 
 
     @Override
@@ -17,7 +19,8 @@ public class CategoryItemsActivity extends AppCompatActivity {
         super.attachBaseContext(LocaleManager.setLocale(base,lan));
     }
     @Override
-    protected void onCreate(Bundle savedInstanceState) {
+    public void onCreate(Bundle savedInstanceState) {
+        setLanguage(lan);
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_category_items);
 

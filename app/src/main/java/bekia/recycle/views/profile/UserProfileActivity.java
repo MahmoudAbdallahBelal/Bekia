@@ -49,6 +49,8 @@ import android.widget.ProgressBar;
 import android.widget.TextView;
 import android.widget.Toast;
 
+import com.akexorcist.localizationactivity.ui.LocalizationActivity;
+
 import java.io.ByteArrayOutputStream;
 import java.io.File;
 import java.io.FileNotFoundException;
@@ -60,7 +62,7 @@ import java.util.List;
 import static bekia.recycle.helper.Utils.retrieveUserLanguage;
 import static bekia.recycle.views.settings.SettingsActivity.lan;
 
-public class UserProfileActivity extends AppCompatActivity {
+public class UserProfileActivity extends LocalizationActivity {
 
     private ImageView imgProfile;
     private EditText nameEdit,usernameEdit,phoneEdit,emailEdit,cityEdit;
@@ -82,7 +84,8 @@ public class UserProfileActivity extends AppCompatActivity {
     }
 
     @Override
-    protected void onCreate(Bundle savedInstanceState) {
+    public void onCreate(Bundle savedInstanceState) {
+        setLanguage(lan);
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_user_profile);
         progressBarEditProfile = findViewById(R.id.progress_edit_profile);

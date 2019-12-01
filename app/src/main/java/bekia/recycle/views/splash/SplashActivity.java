@@ -8,13 +8,15 @@ import android.os.Handler;
 
 import androidx.appcompat.app.AppCompatActivity;
 
+import com.akexorcist.localizationactivity.ui.LocalizationActivity;
+
 import bekia.recycle.R;
 import bekia.recycle.views.LocaleManager;
 import bekia.recycle.views.login.LoginActivity;
 
 import static bekia.recycle.views.settings.SettingsActivity.lan;
 
-public class SplashActivity extends AppCompatActivity {
+public class SplashActivity extends LocalizationActivity {
 
 
     @Override
@@ -23,7 +25,9 @@ public class SplashActivity extends AppCompatActivity {
     }
 
     @Override
-    protected void onCreate(Bundle savedInstanceState) {
+    public void onCreate(Bundle savedInstanceState) {
+        setLanguage(lan);
+
         super.onCreate(savedInstanceState);
             setContentView(R.layout.activity_splash);
 

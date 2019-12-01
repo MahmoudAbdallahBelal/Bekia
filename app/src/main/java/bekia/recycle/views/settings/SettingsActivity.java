@@ -10,13 +10,16 @@ import android.os.Bundle;
 import android.view.View;
 import android.widget.Button;
 
-public class SettingsActivity extends AppCompatActivity {
+import com.akexorcist.localizationactivity.ui.LocalizationActivity;
+
+public class SettingsActivity extends LocalizationActivity {
 
     private Button arBtn , enBtn ,frBtn , grBtn ;
     public static  String lan="en";
 
     @Override
-    protected void onCreate(Bundle savedInstanceState) {
+    public void onCreate(Bundle savedInstanceState) {
+
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_settings);
 

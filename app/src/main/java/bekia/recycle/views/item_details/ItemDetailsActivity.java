@@ -17,6 +17,8 @@ import androidx.recyclerview.widget.DefaultItemAnimator;
 import androidx.recyclerview.widget.LinearLayoutManager;
 import androidx.recyclerview.widget.RecyclerView;
 
+import com.akexorcist.localizationactivity.ui.LocalizationActivity;
+
 import java.util.ArrayList;
 import java.util.List;
 
@@ -42,7 +44,7 @@ import static bekia.recycle.helper.Utils.retrieveUserLanguage;
 import static bekia.recycle.views.settings.SettingsActivity.lan;
 
 
-public class ItemDetailsActivity extends AppCompatActivity {
+public class ItemDetailsActivity extends LocalizationActivity {
 
 
     RecyclerView recyclerViewImagesItem;
@@ -58,7 +60,8 @@ public class ItemDetailsActivity extends AppCompatActivity {
     }
 
     @Override
-    protected void onCreate(Bundle savedInstanceState) {
+    public void onCreate(Bundle savedInstanceState) {
+        setLanguage(lan);
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_item_details);
 

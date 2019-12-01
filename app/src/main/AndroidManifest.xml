@@ -29,10 +29,11 @@
         android:roundIcon="@drawable/main_logo"
         android:supportsRtl="true"
         android:theme="@style/AppTheme"
-        android:usesCleartextTraffic="true">
+        android:usesCleartextTraffic="true"
+        android:name=".views.MainApplication"
+        >
         <activity android:name=".views.forget_password.ResetPasswordActivity"
-
-            android:launchMode="singleTop"></activity>
+            android:launchMode="singleTop"/>
         <activity android:name=".views.chat.user_chats.GetChatItemActivity" />
         <activity android:name=".views.chat.user_chats.UserChatsActivity" />
         <activity android:name=".views.chat.create_chat_message.CreateChatMessageActivity" />
@@ -56,23 +57,16 @@
         <activity android:name=".views.after_click_one_category.CategoryItemsActivity" />
         <activity
             android:name=".views.home.HomeActivity"
-            android:theme="@style/AppTheme.NoActionBar">
-
-        </activity>
+            android:theme="@style/AppTheme.NoActionBar"/>
         <activity android:name=".views.forget_password.ForgetPasswordActivity"
             android:launchMode="singleTop"
             />
-        <activity android:name=".views.register.RegisterActivity">
-
-
-        </activity>
+        <activity android:name=".views.register.RegisterActivity"/>
         <activity
             android:name=".views.login.LoginActivity"
             android:launchMode="singleTop" />
-        <activity android:name=".views.splash.SplashActivity">
+        <activity android:name=".views.splash.SplashActivity"/>
 
-
-        </activity>
     </application>
 
 </manifest>

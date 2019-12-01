@@ -29,13 +29,15 @@ import android.widget.ImageButton;
 import android.widget.ProgressBar;
 import android.widget.Toast;
 
+import com.akexorcist.localizationactivity.ui.LocalizationActivity;
+
 import java.util.ArrayList;
 import java.util.List;
 
 import static bekia.recycle.helper.Utils.retrieveUserLanguage;
 import static bekia.recycle.views.settings.SettingsActivity.lan;
 
-public class GetChatItemActivity extends AppCompatActivity {
+public class GetChatItemActivity extends LocalizationActivity {
 
     private RecyclerView recyclerViewChat;
     private ImageButton imgSendMessage;
@@ -49,7 +51,9 @@ public class GetChatItemActivity extends AppCompatActivity {
         super.attachBaseContext(LocaleManager.setLocale(base,lan));
     }
     @Override
-    protected void onCreate(Bundle savedInstanceState) {
+    public void onCreate(Bundle savedInstanceState) {
+        setLanguage(lan);
+
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_get_chat_item);
 
@@ -134,7 +138,7 @@ public class GetChatItemActivity extends AppCompatActivity {
 
     }
     @Override
-    protected void onResume() {
+    public void onResume() {
         super.onResume();
 
         getChatMessages();

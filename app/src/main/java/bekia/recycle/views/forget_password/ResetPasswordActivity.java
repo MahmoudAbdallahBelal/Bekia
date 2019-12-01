@@ -23,9 +23,11 @@ import android.widget.EditText;
 import android.widget.ProgressBar;
 import android.widget.Toast;
 
+import com.akexorcist.localizationactivity.ui.LocalizationActivity;
+
 import static bekia.recycle.views.settings.SettingsActivity.lan;
 
-public class ResetPasswordActivity extends AppCompatActivity {
+public class ResetPasswordActivity extends LocalizationActivity {
 
     EditText codeEdit , newPasswordEdit;
     ProgressBar progressBarResetNewPassword;
@@ -36,7 +38,8 @@ public class ResetPasswordActivity extends AppCompatActivity {
         super.attachBaseContext(LocaleManager.setLocale(base,lan));
     }
     @Override
-    protected void onCreate(Bundle savedInstanceState) {
+    public void onCreate(Bundle savedInstanceState) {
+        setLanguage(lan);
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_reset_password);
 

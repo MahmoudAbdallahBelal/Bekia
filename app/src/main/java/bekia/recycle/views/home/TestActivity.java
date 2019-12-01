@@ -9,11 +9,12 @@ import bekia.recycle.views.LocaleManager;
 import android.content.Context;
 import android.os.Bundle;
 
+import com.akexorcist.localizationactivity.ui.LocalizationActivity;
 import com.google.android.material.tabs.TabLayout;
 
 import static bekia.recycle.views.settings.SettingsActivity.lan;
 
-public class TestActivity extends AppCompatActivity {
+public class TestActivity extends LocalizationActivity {
 
     TabLayout tabLayout;
     ViewPager viewPager;
@@ -22,7 +23,9 @@ public class TestActivity extends AppCompatActivity {
         super.attachBaseContext(LocaleManager.setLocale(base,lan));
     }
     @Override
-    protected void onCreate(Bundle savedInstanceState) {
+    public void onCreate(Bundle savedInstanceState) {
+        setLanguage(lan);
+
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_test);
 

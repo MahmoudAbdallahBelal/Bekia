@@ -20,6 +20,7 @@ import android.widget.ImageView;
 import android.widget.TextView;
 import android.widget.Toast;
 
+import com.akexorcist.localizationactivity.ui.LocalizationActivity;
 import com.google.android.material.floatingactionbutton.FloatingActionButton;
 import com.google.android.material.navigation.NavigationView;
 import com.google.android.material.snackbar.Snackbar;
@@ -46,7 +47,7 @@ import static bekia.recycle.helper.Utils.retrieveUserLanguage;
 import static bekia.recycle.views.settings.SettingsActivity.lan;
 
 
-public class HomeActivity extends AppCompatActivity
+public class HomeActivity extends LocalizationActivity
         implements NavigationView.OnNavigationItemSelectedListener {
 
     CircleImageView imageProfile ;
@@ -61,7 +62,8 @@ public class HomeActivity extends AppCompatActivity
     }
 
     @Override
-    protected void onCreate(Bundle savedInstanceState) {
+    public void onCreate(Bundle savedInstanceState) {
+        setLanguage(lan);
         super.onCreate(savedInstanceState);
         setContentView(layout.activity_home);
         Toolbar toolbar = (Toolbar) findViewById(id.toolbar);

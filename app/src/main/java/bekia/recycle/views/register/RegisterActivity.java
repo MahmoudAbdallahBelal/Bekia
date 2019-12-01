@@ -51,6 +51,9 @@ import java.util.List;
 
 import androidx.core.app.ActivityCompat;
 import androidx.drawerlayout.widget.DrawerLayout;
+
+import com.akexorcist.localizationactivity.ui.LocalizationActivity;
+
 import bekia.recycle.R;
 import bekia.recycle.helper.Utility;
 import bekia.recycle.requests.city.CityDetails;
@@ -69,7 +72,7 @@ import static android.Manifest.permission.CAMERA;
 import static bekia.recycle.helper.Utils.retrieveUserLanguage;
 import static bekia.recycle.views.settings.SettingsActivity.lan;
 
-public class RegisterActivity extends AppCompatActivity {
+public class RegisterActivity extends LocalizationActivity {
 
     RadioButton radioUser, radioCompany;
     EditText nameEdit,userNameEdit,phoneEdit,emailEdit,passwordEdit,confirmPasswordEdit;
@@ -91,7 +94,8 @@ public class RegisterActivity extends AppCompatActivity {
         super.attachBaseContext(LocaleManager.setLocale(base,lan));
     }
     @Override
-    protected void onCreate(Bundle savedInstanceState) {
+    public void onCreate(Bundle savedInstanceState) {
+        setLanguage(lan);
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_register);
 

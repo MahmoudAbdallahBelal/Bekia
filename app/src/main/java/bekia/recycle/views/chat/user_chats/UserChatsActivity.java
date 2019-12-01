@@ -29,13 +29,15 @@ import android.view.View;
 import android.widget.ProgressBar;
 import android.widget.Toast;
 
+import com.akexorcist.localizationactivity.ui.LocalizationActivity;
+
 import java.util.ArrayList;
 import java.util.List;
 
 import static bekia.recycle.helper.Utils.retrieveUserLanguage;
 import static bekia.recycle.views.settings.SettingsActivity.lan;
 
-public class UserChatsActivity extends AppCompatActivity {
+public class UserChatsActivity extends LocalizationActivity {
 
     private ProgressBar progressBarUserItemChats;
     private RecyclerView recyclerViewChats;
@@ -45,7 +47,8 @@ public class UserChatsActivity extends AppCompatActivity {
         super.attachBaseContext(LocaleManager.setLocale(base,lan));
     }
     @Override
-    protected void onCreate(Bundle savedInstanceState) {
+    public void onCreate(Bundle savedInstanceState) {
+        setLanguage(lan);
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_user_chats);
         recyclerViewChats = findViewById(R.id.recycle_user_items_chats);

@@ -31,11 +31,13 @@ import android.widget.ProgressBar;
 import android.widget.TextView;
 import android.widget.Toast;
 
+import com.akexorcist.localizationactivity.ui.LocalizationActivity;
+
 import java.util.List;
 
 import static bekia.recycle.views.settings.SettingsActivity.lan;
 
-public class SearchActivity extends AppCompatActivity {
+public class SearchActivity extends LocalizationActivity {
 
     private EditText searchEdit;
     private ImageButton searchBtn;
@@ -49,7 +51,8 @@ public class SearchActivity extends AppCompatActivity {
     }
 
     @Override
-    protected void onCreate(Bundle savedInstanceState) {
+    public void onCreate(Bundle savedInstanceState) {
+        setLanguage(lan);
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_search);
 

@@ -53,6 +53,8 @@ import android.widget.ProgressBar;
 import android.widget.TextView;
 import android.widget.Toast;
 
+import com.akexorcist.localizationactivity.ui.LocalizationActivity;
+
 import java.io.ByteArrayOutputStream;
 import java.io.File;
 import java.io.FileNotFoundException;
@@ -64,7 +66,7 @@ import java.util.List;
 import static bekia.recycle.helper.Utils.retrieveUserLanguage;
 import static bekia.recycle.views.settings.SettingsActivity.lan;
 
-public class ItemSellActivity extends AppCompatActivity {
+public class ItemSellActivity extends LocalizationActivity {
 
     RecyclerView recyclerViewSellItem ;
     Button takeItemImagesBtn , sellItemBtn ,categoryBtn , cityBtn ,subCategoryBtn;
@@ -93,7 +95,8 @@ ProgressBar progressBarAddItem ;
     }
 
     @Override
-    protected void onCreate(Bundle savedInstanceState) {
+    public void onCreate(Bundle savedInstanceState) {
+        setLanguage(lan);
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_item_sell);
 
